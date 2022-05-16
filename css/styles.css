@@ -109,6 +109,7 @@ body {
 
 .icon-header {
   margin-right: 10px;
+  fill: #757575;
 }
 
 .link-addr {
@@ -128,13 +129,19 @@ body {
 
 .hero {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: url(../images/hero/hero-img.png),
+  max-width: 1600px;
+  background-image:
     linear-gradient(to right,
-      rgb(47, 48, 58) 50%,
-      rgba(47, 48, 58, 0.4));
+      rgb(47, 48, 58, 0.4) 50%,
+      rgba(47, 48, 58, 0.01)),
+    url(../images/hero/hero-img.png);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -305,12 +312,12 @@ img {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0;
+  margin-bottom: 10;
 }
 
 .team-name {
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .team-txt {
@@ -326,24 +333,27 @@ img {
   margin-right: auto;
 }
 
-.team-card {
-  height: 428px;
-  width: 270px;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
-}
-
 .team-list .team-box:not(:last-child) {
   margin-right: 30px;
 }
 
+.team-box {
+  background-color: #fff;
+  height: 428px;
+  width: 270px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
 /* socials icons */
+
 .socials {
   padding: 0;
   list-style: none;
-  width: 206px;
-  height: 44px;
-  margin: 16px auto auto auto;
+  /* width: 206px; */
+  /* height: 44px; */
+  margin-top: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -373,17 +383,18 @@ img {
   border-radius: 50%;
 }
 
-.social-item .ftr-icon {
+.social-item .footer-icon {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .social-link:hover .social-icon,
-.social-link:active .social-icon {
+.social-link:focus .social-icon {
   fill: #ffffff;
-  background-color: var(--color-font-hover);
+
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--color-font-hover);
 }
 
@@ -396,36 +407,44 @@ img {
   list-style: none;
 }
 
-.mrgn:not(:last-of-type) {
+.client-name:not(:last-of-type) {
   margin-right: 30px;
 }
 
-.clients-slot {
+.client-name {
   display: block;
-  padding: 0;
   width: 170px;
   height: 92px;
   background-color: #fff;
   border: 1px solid #afb1b8;
-  background-position: center;
   border-radius: 4px;
+
 }
 
-.clients-slot:hover,
-.clients-slot:active {
-  border: 1px solid var(--color-font-hover);
-  fill: var(--color-font-hover);
+.clients-slot {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
 }
 
 .clients-item {
   width: 106px;
   height: 60px;
-  padding: auto;
   fill: var(--color-icons);
+
 }
 
-.clients-item:hover,
-.clients-item:active {
+.client-name:hover,
+.client-name:focus {
+  border: 1px solid var(--color-font-hover);
+
+}
+
+.client-name:hover .clients-item,
+.client-name:focus .clients-item {
+
   fill: var(--color-font-hover);
 }
 
@@ -448,12 +467,15 @@ img {
   color: var(--color-font-main);
   border-radius: 4px;
   border: none;
+  padding: 6px 22px;
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
   background-color: var(--color-btn-hover);
   color: var(--color-background-main);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .filter {
@@ -516,14 +538,25 @@ img {
   margin-right: 0;
 }
 
-.thumb:hover {
+.thumb {
+  display: block;
   height: 404px;
   width: 370px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06),
+}
+
+.thumb:hover {
+  box-shadow:
+    0px 4px 4px rgba(0, 0, 0, 0.25),
     0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.25);
+    0px 4px 4px rgba(0, 0, 0, 0.06);
 
+}
 
+/* Footer */
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer-address {
@@ -556,27 +589,26 @@ img {
   color: var(--color-background-main);
 }
 
-.footer-logo {
-  margin-bottom: 20px;
-  width: 231px;
-  height: 151px;
-}
-
 .footer {
   background-color: var(--color-background-hero);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.ftr-box {
-  width: 206px;
-  height: 80px;
-  margin-top: 15px;
+.footer-box {
+
   margin-left: 70px;
 }
 
-.ftr-social {
-  color: #fff;
+.footer-social {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
 }
 
 .address {
