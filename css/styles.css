@@ -351,8 +351,6 @@ img {
 .socials {
   padding: 0;
   list-style: none;
-  /* width: 206px; */
-  /* height: 44px; */
   margin-top: 16px;
   display: flex;
   justify-content: center;
@@ -407,11 +405,11 @@ img {
   list-style: none;
 }
 
-.client-name:not(:last-of-type) {
+.clients-name:not(:last-of-type) {
   margin-right: 30px;
 }
 
-.client-name {
+.clients-name {
   display: block;
   width: 170px;
   height: 92px;
@@ -436,15 +434,24 @@ img {
 
 }
 
-.client-name:hover,
-.client-name:focus {
+.clients-name:hover,
+.clients-name:focus {
+  border: 1px solid var(--color-font-hover);
+}
+
+.clients-slot:hover,
+.clients-slot:focus {
   border: 1px solid var(--color-font-hover);
 
 }
 
-.client-name:hover .clients-item,
-.client-name:focus .clients-item {
+.clients-name:hover .clients-item,
+.clients-name:focus .clients-item {
+  fill: var(--color-font-hover);
+}
 
+.clients-slot:hover .clients-item,
+.clients-slot:focus .clients-item {
   fill: var(--color-font-hover);
 }
 
@@ -544,7 +551,8 @@ img {
   width: 370px;
 }
 
-.thumb:hover {
+.thumb:hover,
+.thumb:focus {
   box-shadow:
     0px 4px 4px rgba(0, 0, 0, 0.25),
     0px 1px 1px rgba(0, 0, 0, 0.12),
