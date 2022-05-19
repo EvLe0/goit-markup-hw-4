@@ -631,11 +631,9 @@ html {
   padding-left: 15px;
   padding-right: 15px;
 }
-
 .address-list :not(:last-child) {
   margin-bottom: 9px;
 }
-
 .address-list {
   margin-top: 20px;
 }
