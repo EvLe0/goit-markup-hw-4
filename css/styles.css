@@ -434,20 +434,10 @@ img {
 
 }
 
-.clients-name:hover,
-.clients-name:focus {
-  border: 1px solid var(--color-font-hover);
-}
-
 .clients-slot:hover,
 .clients-slot:focus {
   border: 1px solid var(--color-font-hover);
 
-}
-
-.clients-name:hover .clients-item,
-.clients-name:focus .clients-item {
-  fill: var(--color-font-hover);
 }
 
 .clients-slot:hover .clients-item,
@@ -551,7 +541,7 @@ img {
   width: 370px;
 }
 
-.thumb:hover,
+.thumb:hover,.clients-name
 .thumb:focus {
   box-shadow:
     0px 4px 4px rgba(0, 0, 0, 0.25),
